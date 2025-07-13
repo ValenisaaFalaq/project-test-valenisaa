@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magang Berdampak-Suitmedia Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Start Header -->
+  <header id="main-header" class="bg-[#F16522] text-white fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <img
+            src="public/img/suitmedia-logo-removebg-preview.png"
+            alt="Suitmedia-Logo"
+            class="h-[60px] w-auto"
+          />
+        </div>
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="#" class="hover:text-gray-200">Work</a>
+          <a href="#" class="hover:text-gray-200">About</a>
+          <a href="#" class="hover:text-gray-200">Services</a>
+          <a href="#" class="hover:text-gray-200 font-bold underline underline-offset-4">Ideas</a>
+          <a href="#" class="hover:text-gray-200">Careers</a>
+        </nav>
+      </div>
+    </header>
+  <!-- End Header -->
+
+ <!-- Start Banner -->
+ <section class="relative h-[300px] overflow-hidden">
+  <div id="banner" class="absolute inset-0 bg-cover bg-center bg-fixed z-[-1]"></div>
+  
+  <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-white text-center px-4">
+    <h1 class="text-4xl font-bold">Ideas</h1>
+    <p class="text-lg mt-2">Where all our great things begin</p>
+  </div>
+  
+  <div class="absolute -bottom-10 w-[120%] h-32 bg-white rotate-[-3deg] -translate-x-[10%] origin-bottom"></div>
+</section>
+<!-- End Banner -->
+
+  <!-- Start List -->
+    <section class="py-10 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-6 gap-4">
+          <div id="pagination-summary" class="text-sm text-gray-600"></div>
+          <div class="flex items-center gap-4">
+            <div>
+              <label for="sort" class="mr-2">Sort by:</label>
+              <select id="sort" class="border rounded px-2 py-1">
+                <option value="published_at">Oldest</option>
+                <option value="-published_at" selected>Newest</option>
+              </select>
+            </div>
+            <div>
+              <label for="perPage" class="mr-2">Show per page:</label>
+              <select id="perPage" class="border rounded px-2 py-1">
+                <option value="10" selected>10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="post-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        </div>
+
+
+        <p id="pagination-info" class="text-center text-sm text-gray-500 mt-6"></p>
+
+        <div id="pagination-controls" class="flex gap-2 justify-center mt-4 flex-wrap"></div>
+      </div>
+    </section>
+  <!-- End List -->
+
+    <!-- Script -->
+    <script type="module" src="/src/script.js"></script>
+  </body>
+</html>
