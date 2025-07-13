@@ -50,8 +50,7 @@ sortSelect.value = sort;
 perPageSelect.value = perPage;
 
 async function fetchPosts(page = 1) {
-  const url = `/api/ideas?page[number]=${page}&page[size]=${perPage}&append[]=small_image&append[]=medium_image&sort=${sort}`;
-
+    const url = `https://suitmedia-backend.suitdev.com/api/ideas?page[number]=${page}&page[size]=${perPage}&append[]=small_image&append[]=medium_image&sort=${sort}`;
   try {
     const res = await fetch(url, {
       headers: {
